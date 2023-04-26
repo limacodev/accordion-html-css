@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+<body>
+
+    <style>
+        body {
+            background: #00b09b;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background-attachment: fixed;
+            font-family: sans-serif;
+        }
+        .main {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .main-title {
+            margin-top: 3em;
+            text-align: center;
+            text-transform: uppercase;
+            color: #005524;
+        }
+
+
+        /* Your Code */
+        .accordion-container input {
+            display: none;
+        }
+        .accordion-container .tabs {
+
+        }
+        .accordion-container .tab {
+            overflow: hidden;
+        }
+        .accordion-container .tab-container {
+            max-height: 0;
+            padding: 0 1em;
+            transition: all 0.25s;
+            background: #fff;
+        }
+        .accordion-container input:checked ~ .tab-container {
+            max-height: 100vh;
+            padding: 1em;
+            color: #3c3c3c
+        }
+        .accordion-container .tab-title {
+            display: flex;
+            padding: 1em;
+            cursor: pointer;
+            background: #00b34c;
+            color: #fff;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(0 0 0 / 10%);
+        }
+        .accordion-container .tab-title:hover {
+            background: #1ea24b;
+        }
+        .accordion-container .tab-title::after {
+            content: "❯";
+            transition: all 0.25s;
+        }
+        .accordion-container input:checked + .tab-title::after {
+            transform: rotate(90deg);
+        }
+    </style>
+    
+    <div class="main">
+        <h1 class="main-title">Accordion HTML and CSS</h1>
+        <!-- Your code -->
+        <section class="accordion-container">
+            <div class="tabs">
+                <div class="tab">
+                    <!-- <input type="checkbox" id="id-1"> -->
+                    <input type="radio" id="id-1" name="rad">
+                    <label class="tab-title" for="id-1">Accordion Tab #1</label>
+                    <div class="tab-container">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae architecto quo, dolore facilis vel neque distinctio nesciunt dolores esse accusamus ea beatae magnam quos veritatis nemo eligendi? Repellat, hic saepe.
+                    </div>
+                </div>
+                <div class="tab">
+                    <!-- <input type="checkbox" id="id-2"> -->
+                    <input type="radio" id="id-2" name="rad">
+                    <label class="tab-title" for="id-2">Accordion Tab #2</label>
+                    <div class="tab-container">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae architecto quo, dolore facilis vel neque distinctio nesciunt dolores esse accusamus ea beatae magnam quos veritatis nemo eligendi? Repellat, hic saepe.
+                    </div>
+                </div>
+                <div class="tab">
+                    <!-- <input type="checkbox" id="id-3"> -->
+                    <input type="radio" id="id-3" name="rad">
+                    <label class="tab-title" for="id-3">Accordion Tab #3</label>
+                    <div class="tab-container">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae architecto quo, dolore facilis vel neque distinctio nesciunt dolores esse accusamus ea beatae magnam quos veritatis nemo eligendi? Repellat, hic saepe.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+</body>
+</html>
